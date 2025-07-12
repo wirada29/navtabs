@@ -7,19 +7,187 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <style>
       @font-face {
-        font-family: "Mn";
-        src: url(font/MN-Gyeran-ppang/คเยรันปัง/MN\ Gyeran-ppang\ Bold.ttf);
+        font-family: "08";
+        src: url(font/08-TH-K2D-July8/TH\ K2D\ July8.ttf);
       }
       body {
-        font-family: "Mn", sans-serif;
+        font-family: "08", sans-serif;
       }
-      .card-img-top {
-        margin: 25px auto;
-        width: 70%;
+    .head {
+            background-color: rgb(126, 29, 29);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            border-radius: 10px;
+            font-weight: bold;
+            color: white;
+        }
+      .navbar {
+            justify-content: center;
+            text-align: center;
+            padding-right: 5px;
+            padding-left: 5px;
+            margin-right: auto;
+            margin-left: auto;
+            z-index: 1000;
+            position: relative;
+            font-weight: bold;
       }
-    </style>
+      .news-menu {
+            display: flex;
+            background-color: #eaeaea;
+            padding: 10px 20px;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+      }
+      .menu-item {
+            display: flex;
+            align-items: center;
+            color: #000;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 8px 12px;
+            transition: 0.3s;
+      }
+
+      .menu-item i {
+            margin-right: 8px;
+            font-size: 18px;
+      }
+      .card {
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+    .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      }
+      .grid-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px;
+        margin: 20;
+        margin-top: 50px;
+      }
+      .footer {
+        background-color: rgb(126, 29, 29);
+        padding: 40px 20px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+        color: white;
+        gap: 20px;
+      }
+  </style>
 </head>
 <body>
+  <div class="head">
+        <img src="img/logo.gif" width="100">  
+          <h1>วิทยาลัยเทคนิคสัตหีบ Thai-Austrian Technical College</h1>
+      </div>
+<!-- navbar -->
+<div class="navbar">
+<nav class="navbar navbar-expand-lg  position-relative z-3">
+  <div class="container-center">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <!-- ข่าววิทยาลัย -->
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            หน้าแรก
+          </button>
+        </li>
+
+        <!-- ข้อมูลพื้นฐานวิทยาลัย -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+            ข้อมูลพื้นฐานวิทยาลัย
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ประวัติความเป็นมา</a></li>
+            <li><a class="dropdown-item" href="#">สัญลักษณ์</a></li>
+            <li><a class="dropdown-item" href="#">วิสัยทัศน์ / พันธกิจ / สมรรถนะหลัก / และค่านิยม</a></li>
+          </ul>
+        </li>
+
+        <!-- แผนกวิชาที่เปิดสอน -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+            แผนกวิชาที่เปิดสอน
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ช่างยนต์</a></li>
+            <li><a class="dropdown-item" href="#">ช่างกลโรงงาน</a></li>
+            <li><a class="dropdown-item" href="#">ช่างเชื่อมโลหะและตรวจสอบโดยไม่ทำลาย (NDT)</a></li>
+            <li><a class="dropdown-item" href="#">ช่างอิเล็กทรอนิกส์</a></li>
+            <li><a class="dropdown-item" href="#">ช่างก่อสร้าง</a></li>
+            <li><a class="dropdown-item" href="#">ช่างเขียนแบบเครื่องกล</a></li>
+            <li><a class="dropdown-item" href="#">เมคคาทรอนิกส์</a></li>
+            <li><a class="dropdown-item" href="#">เครื่องมือวัดและควบคุม</a></li>
+            <li><a class="dropdown-item" href="#">เทคนิคพลังงาน</a></li>
+            <li><a class="dropdown-item" href="#">ช่างอากาศยาน</a></li>
+            <li><a class="dropdown-item" href="#">เทคนิคควบคุมและซ่อมบำรุงระบบขนส่งทางราง</a></li>
+            <li><a class="dropdown-item" href="#">การบัญชี</a></li>
+            <li><a class="dropdown-item" href="#">คอมพิวเตอร์ธุรกิจ</a></li>
+            <li><a class="dropdown-item" href="#">ธุรกิจการบิน</a></li>
+            <li><a class="dropdown-item" href="#">การจัดการโลจิสติกส์และการจัดการธุรกิจค้าปลีก</a></li>
+            <li><a class="dropdown-item" href="#">การโรงแรม</a></li>
+            <li><a class="dropdown-item" href="#">การท่องเที่ยว</a></li>
+            <li><a class="dropdown-item" href="#">เทคโนโลยีสารสนเทศและเทคโนโลยีคอมพิวเตอร์</a></li>
+            <li><a class="dropdown-item" href="#">เทคนิคพื้นฐาน</a></li>
+            <li><a class="dropdown-item" href="#">สามัญสัมพันธ์</a></li>
+          </ul>
+        </li>
+
+        <!-- หน่วยงานภายในวิทยาลัย -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+            หน่วยงานภายในวิทยาลัย
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ฝ่ายบริหารทรัพยากร</a></li>
+            <li><a class="dropdown-item" href="#">ฝ่ายวิชาการ</a></li>
+            <li><a class="dropdown-item" href="#">ฝ่ายแผนงานและความร่วมมือ</a></li>
+            <li><a class="dropdown-item" href="#">ฝ่ายพัฒนาการศึกษา</a></li>
+          </ul>
+        </li>
+<!-- ระเบียบวิทยาลัยเทคนิคสัตหีบ -->
+      <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark" data-bs-toggle="dropdown" href="#" role="button"
+            aria-expanded="false">
+            หน่วยงานภายในวิทยาลัย
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">ระเบียบการแต่งกายนักเรียน นักศึกษา พ.ศ. 2566</a></li>
+            <li><a class="dropdown-item" href="#">หลักเกณฑ์ในการพิจารณาโทษนักเรียน นักศึกษา</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane"
+            type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">
+            ติดต่อ
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
 <!-- Carousel -->
     <div
       id="carouselExampleInterval"
@@ -35,19 +203,19 @@
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 5"></button>
   </div>      
         <div class="carousel-item active" data-bs-interval="1500">
-          <img src="img/11.png" class="d-block w-100"/>
+          <img src="img/1.jpg" class="d-block w-100"/>
         </div>
         <div class="carousel-item" data-bs-interval="1500">
-          <img src="img/33.png" class="d-block w-100"/>
+          <img src="img/2.jpg" class="d-block w-100"/>
         </div>
         <div class="carousel-item" data-bs-interval="1500">
-          <img src="img/44.png" class="d-block w-100"/>
+          <img src="img/3.jpg" class="d-block w-100"/>
         </div>
         <div class="carousel-item" data-bs-interval="1500">
-          <img src="img/55.png" class="d-block w-100"/>
+          <img src="img/4.jpg" class="d-block w-100"/>
         </div>
         <div class="carousel-item" data-bs-interval="1500">
-          <img src="img/22.png" class="d-block w-100"/>
+          <img src="img/5.jpg" class="d-block w-100"/>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -59,572 +227,216 @@
   </button>
 </div>
 
-
-<!-- navbar -->
-        <nav class="navbar navbar-expand-lg bg-body-tertiary position-relative z-0">
-        <img src="img/logo.png" class="position-absolute Z-1 bottom-0">
-  <div class="container" style="padding-left: 550px;">
-    <!-- <a class="navbar-brand" href="#">Navbar</a> -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
-      </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form>
-    </div> -->
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">สท.4/1</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">สท.4/2</button>
-  </li>
-</ul>
+<!-- เมนู -->
+<div class="news-menu">
+  <a href="#" class="menu-item active">
+    <i class="fas fa-university"></i> <img src="img/campus.png" width="20">ข่าววิทยาลัย
+  </a>
+  <a href="#" class="menu-item">
+    <i class="fas fa-book"></i> <img src="img/open-book.png" width="15">ข่าวทุนวิจัย/อบรม
+  </a>
+  <a href="#" class="menu-item">
+    <i class="fas fa-user-graduate"></i> <img src="img/user.png" width="15">ข่าวนักศึกษา
+  </a>
+  <a href="#" class="menu-item">
+    <i class="fas fa-book-open"></i> <img src="img/open-book.png" width="15" > ข่าวรับสมัครนักศึกษา
+  </a>
 </div>
-</nav>
-
-<!-- tab content -->
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">....</div>
-
-  <!-- 4/1 -->
-  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
-  <!-- แถว 1 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/001.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายกรณ์ดนัย อินทรโอสถ</h5>
-        <p class="card-text">68319010001</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/002.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวกัญญาวีร์  ศรีกัลยาณกุล</h5>
-        <p class="card-text">68319010002</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/003.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายจาตุรนต์  แสงสังข์</h5>
-        <p class="card-text">68319010003</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/004.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายจิรวิฒน์  บุญแผน</h5>
-        <p class="card-text">68319010004</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
- <!-- แถว 2 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/005.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวชลธิชา  หล้าโสม</h5>
-        <p class="card-text">68319010005</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/006.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายชัยวัฒน์  ปรารมย์</h5>
-        <p class="card-text">68319010006</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/007.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายชัยวัฒน์  ลบแย็ม</h5>
-        <p class="card-text">68319010007</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/008.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายณภัทร  เสลี</h5>
-        <p class="card-text">68319010008</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 3 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/009.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายณัฐพล  พันธุ</h5>
-        <p class="card-text">68319010009</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/010.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายทัพพ์จิรัฐ  กาญจนเกตุ</h5>
-        <p class="card-text">68319010010</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/011.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายธนวัฒน์  ทองดีนอก</h5>
-        <p class="card-text">68319010011</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/012.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายธนสร  ใสยิ่ง</h5>
-        <p class="card-text">68319010012</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 4 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/013.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวธวัลรัตน์  เกตุมงคลวิวัฒน์</h5>
-        <p class="card-text">68319010013</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/014.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายธันวา  เกตุสุวรรณ</h5>
-        <p class="card-text">68319010014</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/015.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายธีรวัฒน์  พรมสิงห์</h5>
-        <p class="card-text">68319010015</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/016.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวนภัส เพชรฤทธิ์</h5>
-        <p class="card-text">68319010016</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 5 -->
-   <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/017.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายนรวีร์  ย่วนยินรักษ์</h5>
-        <p class="card-text">68319010017</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/018.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายนฤเบศ  แพทย์ประสิทธิ์</h5>
-        <p class="card-text">68319010018</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/019.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายนาวิน  ศิริขันแสง</h5>
-        <p class="card-text">68319010019</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/021.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายแผ่นฟ้า  เทศวิศาล</h5>
-        <p class="card-text">68319010021</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 6 -->
-<div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/022.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายพัณณ์กฤต  สินธุรักษ์</h5>
-        <p class="card-text">68319010022</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/023.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายภัทรพล  พลเขต</h5>
-        <p class="card-text">68319010023</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-
-<!-- 4/2 -->
-<div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">
-  <!-- แถว 1 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/024.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายภีระพัฒน์  คำอ้อ</h5>
-        <p class="card-text">68319010024</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/025.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายภูริวัจน์  ลิ้มวัฒนโรจน์</h5>
-        <p class="card-text">68319010025</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/026.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวมินทร์ตรายา  เจริญผล</h5>
-        <p class="card-text">68319010026</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/027.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวยุพาวัลย์  อินจันทร์</h5>
-        <p class="card-text">68319010027</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
- <!-- แถว 2 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/028.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายวราวุธ  เพ็งขุนทด</h5>
-        <p class="card-text">68319010028</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/029.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาววาสนา  ไทรศักดิ์สิทธิ์</h5>
-        <p class="card-text">68319010029</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/030.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาววิรดา  ยาจันทรา</h5>
-        <p class="card-text">68319010030</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/031.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายวิศรุต  นามเสนาะ</h5>
-        <p class="card-text">68319010031</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 3 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/032.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายศตวรรษ  เนื่องจำนงค์</h5>
-        <p class="card-text">68319010032</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/033.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายศิริศักดิ์  เจริญอาจ</h5>
-        <p class="card-text">68319010033</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/034.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายศิวัฒน์  เลิศขุนทด</h5>
-        <p class="card-text">68319010034</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/035.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายศุภกานต์  สาตสิน</h5>
-        <p class="card-text">68319010035</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 4 -->
-  <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/036.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายศุภฤกษ์  ยะตั๋น</h5>
-        <p class="card-text">68319010036</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/037.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวศุภิสรา  แสนเจียม</h5>
-        <p class="card-text">68319010037</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/038.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายสธน  ลิ้มสกุลทิพย์</h5>
-        <p class="card-text">68319010038</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/039.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายสรธร  มนูญธรรมพร</h5>
-        <p class="card-text">68319010039</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 5 -->
-   <div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/040.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายสิปปวิชญ์  ฉิมกลาง</h5>
-        <p class="card-text">68319010040</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/041.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายสิรภัทร   จุฬารัชศิลป์</h5>
-        <p class="card-text">68319010041</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/042.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายสุรวัฒน์  ศรีสุวรรณ์</h5>
-        <p class="card-text">68319010042</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/043.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นางสาวหทัยกาญจน์  บุญทัศน์</h5>
-        <p class="card-text">68319010043</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-<!-- แถว 6 -->
-<div class="container mt-5"</div>
-  <div class="row row-cols-1 row-cols-md-4 g-4">
-  <div class="col">
-    <div class="card h-100">
-      <img src="img/044.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายอนันต์สิทธิ์  จุ้ยเย็น</h5>
-        <p class="card-text">68319010044</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <img src="img/045.jpg" class="card-img-top rounded-circle" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">นายออสการ์ คลาวสลี่ย์ สตีเฟ่น</h5>
-        <p class="card-text">68319010045</p>
-        <button class="btn btn-primary">Profile</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</div>
+  
 
 
 
+<!-- card groups -->
+ <div class="container mt-5">
+ <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/186.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-186 การประชุมผู้บริหาร คณะครู และบุคลากรทางการศึกษา (สภา PLC) </h5>
+        <p class="card-text">ดร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบ พร้อมด้วยคณะผู้บริหาร ผู้แทนฝ่าย หัวหน้าแผนก  หัวหน้างานทะเบียน หัวหน้างานบุคลากร  หัวหน้างานวัดผล หัวหน้างานหลักสูตรฯ หัวหน้างานสื่อการเรียนการสอน หัวหน้างานปกครอง หัวหน้างานอาคารสถานที่  หัวหน้างานความร่วมมือ  หัวหน้างานการเงิน หัวหน้างานกิจกรรม หัวหน้างานแนะแนว หัวหน้างานครูที่ปรึกษา หัวหน้างานพัสดุ และผู้ตรวจสอบภายใน เข้าประชุมสภา PLC เพื่อการรับทราบปัญหาของแผนกวิชาต่าง ๆ และแนวทางการแก้ไขปัญหา</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/187.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-187 การฝึกอาชีพ โครงการ ส่งเสริมการพัฒนาทักษะอาชีพให้กับผู้เรียนตามนโยบายลดเวลาเรียนเพิ่มเวลารู้</h5>
+        <p class="card-text">ร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบ มอบหมายให้มอบหมายให้นางสาวชุติมา โชคกนกวัฒนา รองผู้อำนวยการฝ่ายวิชาการ และคณะครูที่เกี่ยวข้องกับ "โครงการส่งเสริมการพัฒนาทักษะอาชีพให้กับผู้เรียนตามนโยบายลดเวลาเรียนเพิ่มเวลารู้" โดยได้ดำเนินการจัดการเรียนการสอนโรงเรียนสัตหีบเขตฐานทัพเรือสัตหีบและโรงเรียนนาวิกโยธินบูรณะ ระดับชั้นมัธยมศึกษาปีที่ 2-3 (หลักสูตรระยะสั้น 20 ชม.) " จากสำนักงานการบินพลเรือนแห่งประเทศไทย</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/188.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title" style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-188 โครงการอบรมให้ความรู้จราจร ประจำปีงบประมาณ 2568</h5>
+        <p class="card-text">โครงการนี้จัดขึ้นเพื่อให้นักเรียนนักศึกษามีความรู้ด้านกฎหมายจราจร และสามารถนำความรู้ไปใช้ปฏิบัติในชีวิตประจำวัน เกิดจิตสำนึกในการขับขี่ตามกฎจราจร และไม่สร้างความเดือดร้อนหรือสร้างความสูญเสียให้กับตนเองและผู้อื่น 
+      โดยทางวิทยาลัยเทคนิคสัตหีบ ได้รับเกียรติจากทางเทศบาลตำบลนาจอมเทียนให้เป็นเจ้าภาพในการจัดสถานที่ฝึกอบรมฯ มีตัวแทนนักเรียน นักศึกษา ผู้เข้าร่วมอบรมจำนวนทั้งสิ้น 90 คน </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/189.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-189 พิธีลงนามบันทึกข้อตกลงความร่วมมือ (MOU) เพื่อขับเคลื่อนนโยบายสร้างความปลอดภัยในสถานศึกษา</h5>
+        <p class="card-text"> ดร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบ มอบหมายให้งานความร่วมมือ ฝ่ายแผนงานและความร่วมมือ ดำเนินการจัดพิธีลงนามบันทึกข้อตกลง (MOU) ว่าด้วยความร่วมมือแบบบูรณาการในการขับเคลื่อนนโยบายเสริมสร้างความปลอดภัยของนักเรียน ครู และบุคลากรทางการศึกษา โดยมีเป้าหมายเพื่อสร้างเครือข่ายความร่วมมือในการดูแลความปลอดภัยในสถานศึกษาอย่างเป็นรูปธรรม</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 2 -->
+  <div class="container mt-5">
+ <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/190.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-190 ผู้อำนวยการเข้าร่วมประชุมหารือและรับทราบข้อเสนอแนะการเข้าฝึกอาชีพในสถานประกอบการของนักศึกษาสาขาวิชาช่างอากาศยาน  </h5>
+        <p class="card-text">ดร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบเข้าร่วมประชุมหารือและรับทราบข้อเสนอแนะการเข้าฝึกอาชีพในสถานประกอบการของนักศึกษาสาขาวิชาช่างอากาศยาน โดยมี นายอัศวิน ข่มอาวุธ ผู้อำนวยการสำนักมาตรฐานการอาชีวศึกษาและวิชาชีพ นาวาอากาศตรี บัญชา ชุนสิทธิ์ ประธาน อ.กรอ.อศ. กลุ่มอาชีพอุตสาหกรรมการบิน นางสาวกชกร บุษราภรณ์ ผู้อำนวยวิทยาลัยเทคนิคถลาง นายธาตรี พิบูลมณฑา ผู้อำนวยวิทยาลัยเทคนิคอุบลราชธานี นายสุรินทร์ บุญสนอง ผู้อำนวยวิทยาลัยเทคนิคสมุทรปราการ นายลำปางเพ็ชร์ พันธ์เพชร ผู้อำนวยวิทยาลัยการอาชีพขอนแก่น และเจ้าหน้าที่สำนักมาตรฐานการอาชีวศึกษาและวิชาชีพ เข้าร่วมประชุมหารือพร้อมกัน </p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/191.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-191 กิจกรรมลูกเสือสัปดาห์ที่ 3 โครงการพิธีรับเตรียมลูกเสือวิสามัญ (ประดับแถบ 2 สี) </h5>
+        <p class="card-text">ดร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบ เป็นประธานในพิธีรับเตรียมลูกเสือ-เนตรนารีวิสามัญ ประจำปีการศึกษา 2568 พร้อมด้วยนางสาวสำราญจิตร์ ภูมี รองผู้อำนวยการฝ่ายพัฒนากิจการนักเรียนนักศึกษา คณะผู้กำกับลูกเสือ ทั้งนี้มีลูกเสือ-เนตรนารีวิสามัญ นักเรียนระดับชั้น ปวช.1 จากทุกแผนกวิชา เข้าร่วมพิธีประดับแถบอย่างพร้อมเพรียง</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/192.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-192 พิธีทบทวนคำปฏิญาณและสวนสนาม ประจำปี 2568 เนื่องในวันคล้ายวันสถาปนาคณะลูกเสือไทย </h5>
+        <p class="card-text">กิจกรรมดังกล่าวจะจัดขึ้นในวันที่ 1 กรกฎาคมของทุกปี ซึ่งเป็นวันคล้ายวันสถาปนาคณะลูกเสือแห่งชาติ โดยมีการจัดพิธีทบทวนคำปฏิญาณและสวนสนามของลูกเสือ เพื่อรำลึกถึงพระมหากรุณาธิคุณของพระบาทสมเด็จพระมงกุฎเกล้าเจ้าอยู่หัว ผู้ทรงก่อตั้งกิจการลูกเสือไทย จะแสดงออกถึงความจงรักภักดีต่อชาติ ศาสนา พระมหากษัตริย์</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/193.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-193 ประชุมเตรียมความพร้อมการประเมินประกันคุณภาพภายนอก</h5>
+        <p class="card-text">ดร. อรทัย โยธินรุ่งเรือง สุดสงวน ผู้อำนวยการวิทยาลัยเทคนิคสัตหีบ พร้อมด้วยคณะผู้บริหาร และคณะกรรมการ ประชุมเตรียมความพร้อมรับการประเมินคุณภาพภายนอก ด้วยสำนักงานรับรองมาตรฐานและประเมินคุณภาพการศึกษา (องค์การมหาชน) ว่าจะมีการตรวจเยี่ยมสถานศึกษาเพื่อประเมินคุณภาพภายนอกด้านการอาชีวศึกษา (พ.ศ. 2566 - 2570) ประจำปีงบประมาณ พ.ศ. 2568 โดยจะมีการตรวจเยี่ยมแบบ Onsite Visit ระหว่างวันที่ 30 – 31 กรกฎาคม พ.ศ. 2568</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- 3 -->
+  <div class="container mt-5 mb-5">
+ <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/194.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-194 กิจกรรมแห่เทียนพรรษา ประจำปี 2568</h5>
+        <p class="card-text">กิจกรรมงานประเพณีแห่เทียนพรรษา ประจำปี พ.ศ. 2568 จัดขึ้นโดยเทศบาลตำบลนาจอมเทียน นำโดยนางสาวระพีพรรณ รัตนเหลี่ยม นายกเทศมนตรีตำบลนาจอมเทียน มีผู้เข้าร่วมกิจกรรมเป็นจำนวนมากทั้งสมาชิกสภาเทศบาล หัวหน้าส่วนราชการพนักงานราชการพร้อมด้วยตัวแทนจากโรงเรียนและวิทยาลัยต่าง ๆ รวมถึงประชาชนที่มาเข้าร่วมกิจกรรม</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/195.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-195 ต้อนรับสำนักพัฒนากำลังคน (MDD)</h5>
+        <p class="card-text">การประชุมในครั้งนี้มีวัตถุประสงค์เพื่อรับฟังความคิดเห็นและข้อเสนอแนะเกี่ยวกับแนวทางการจัดการเรียนการสอนเพื่อรองรับความต้องการของอุตสาหกรรมเป้าหมายในพื้นที่พิเศษ รวมถึงการพัฒนาทักษะกำลังคนอย่างมีประสิทธิภาพ พร้อมทั้งขอความอนุเคราะห์ข้อมูลจากสถานศึกษา เพื่อใช้ในการจัดทำแนวทางการดำเนินงานในอนาคต</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/196.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-196 แห่เทียนพรรษาวัดสัตหีบ (หลวงพ่ออี๋) </h5>
+        <p class="card-text">ภายในกิจกรรมประกอบด้วยการประกวดเทียนพรรษา กิจกรรมแห่เทียนพรรษา และถวายเทียนพรรษา จตุปัจจัยไทยธรรม และเครื่องสักการะเนื่องในเทศกาลเข้าพรรษา ณ สำนักปฏิบัติธรรมเขาพลอย โดยกิจกรรมนี้จัดขึ้นเพื่อส่งเสริมคุณธรรมจริยธรรมปลูกฝังจิตสำนึกทางศาสนา และรักษาขนบธรรมเนียมอันดีงามเพื่อสร้างเสริมและปลูกฝังจิตสำนึกให้แก่เยาวชนไทย</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100">
+      <img src="img/197.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"  style="color:  rgb(126, 29, 29); font-weight: bold;">ข่าวไทยออส-197 เข้าร่วมประชุมและร่วมเป็นคณะอนุกรรมการร่วมภาครัฐและเอกชน เพื่อผลิตและพัฒนากำลังคนอาชีวศึกษา (อ.กรอ.อศ.)</h5>
+        <p class="card-text">การประชุมดังกล่าวมีวัตถุประสงค์เพื่อร่วมกันขับเคลื่อนความร่วมมือระหว่างภาครัฐและเอกชนในการยกระดับคุณภาพกำลังคนสายอาชีพของประเทศ และเพื่อแนะนำคณะอนุกรรมการ อ.กรอ.อศ. กลุ่มอาชีพการจัดการ การเงินและบัญชี พร้อมทั้งชี้แจงบทบาทหน้าที่และความรับผิดชอบของคณะอนุกรรมการในด้านต่าง ๆ นอกจากนี้ ที่ประชุมยังได้หารือแนวทางการขับเคลื่อนกิจกรรมร่วมระหว่างภาครัฐและเอกชน ภายใต้กลไก อ.กรอ.อศ.</p>
+      </div>
+      <div class="card-footer">
+        <small class="text-body-secondary">Last updated 3 mins ago</small>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!-- footer -->
+  <!-- column 1 -->
+ <div class="footer">
+      <div>
+        <h4 style="color: rgb(255, 255, 255);">อื่นๆ</h4>
+        <p>สมัครงาน<br>
+        จัดซื้อจัดจ้าง<br>
+        แผนที่<br>
+        ถาม-ตอบ<br>
+        ติดต่อสอบถาม/เสนอแนะ</p>
+      </div>
+  <!-- column 2 -->
+        <div>
+        <h4 style="color: rgb(255, 255, 255);">ติดต่อ วิทยาลัยเทคนิคสัตหีบ</h4>
+        <p>วิทยาลัยเทคนิคสัตหีบ Thai-Austrian Technical College <br>
+        กม.160 193 หมู่ 3 ต.นาจอมเทียน อ.สัตหีบ จ.ชลบุรี 20250 <br>
+        โทรศัพท์ 038-238398,038-238527<br>
+        โทรสาร 038-237268 <br>
+        อีเมล : saraban@tatc.ac.th </p>
+      </div>
+  <!-- column 3 -->
+   <div style="text-align: center;">
+      <h4 style="color: #fff;">ติดตามเราได้ที่</h4>
+      <div style="font-size: 24px; margin-bottom: 10px;">
+        <a href="https://www.facebook.com/profile.php?id=100057082464680" style="color: white; margin: 0 8px;"><img src="img/facebook.png" alt="" width="50"></a>
+        <a href="#" style="color: white; margin: 0 8px;"><img src="img/twitter.png" alt="" width="40"></a>
+        <a href="#" style="color: white; margin: 0 8px;"><img src="img/youtube.png" alt="" width="50"></a>
+        <a href="#" style="color: white; margin: 0 8px;"><img src="img/video.png" alt="" width="50"></a>
+      </div>
+    </div>
+ </div>
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
